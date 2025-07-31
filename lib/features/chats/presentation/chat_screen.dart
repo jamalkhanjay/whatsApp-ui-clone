@@ -3,6 +3,7 @@ import 'package:hanging_around_wd_ui/core/widgets/app_bar_widget.dart';
 import 'package:hanging_around_wd_ui/enums/chat_enum.dart';
 import 'package:hanging_around_wd_ui/features/chats/model/list_data.dart';
 // import 'package:hanging_around_wd_ui/screens/testing_generate.dart';
+import 'package:hanging_around_wd_ui/features/chats/widgets/choice_chips_horizontal.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -54,69 +55,8 @@ class _ChatScreenState extends State<ChatScreen> {
             const SizedBox(height: 16),
 
             // Horizontal scroll view
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                // Applying map on list gives iterable while here children of
-                // row wants list widgets, so at the last we write .toList()
-                children: ChatEnum.values.map((item) {
-                  return Padding(
-                    padding: const EdgeInsetsGeometry.all(6),
-                    child: ChoiceChip(
-                      showCheckmark: false,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 4,
-                        vertical: 2,
-                      ),
-                      label: Text(
-                        // for example item recieve word all
-                        // item.name[0] -> a   -> toUpperCase() -> A
-                        // + item.name.substriing(1) means it will start from
-                        // index 1 to the end which ll so it becomes All
-                        item.name[0].toUpperCase() + item.name.substring(1),
-                      ),
-                      selected: selectedSegmentValue == item,
-                      selectedColor:
-                          Colors.green[100], // WhatsApp-style highlight
-                      backgroundColor: Colors.white,
-                      side: BorderSide(color: Colors.grey.shade300), // Border
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(50),
-                      ),
-                      onSelected: (bool selected) {
-                        setState(() {
-                          selectedSegmentValue = item;
-                        });
-                      },
-                    ),
-                  );
-                }).toList(),
-              ),
+            ChoiceChipsHorizontal(),
 
-              // -------- I have implemented this with Segmenetd buttons
-              // But we can't seprate segment like in whats for this
-              // We have to switch or implement the choiceChip
-              // child: SegmentedButton<ChatEnum>(
-              //   // showSelectedIcon: false,
-              //   style: ButtonStyle(),
-              //   segments: [
-              //     ButtonSegment(value: ChatEnum.all, label: Text('All')),
-              //     ButtonSegment(value: ChatEnum.unread, label: Text('Unread')),
-              //     ButtonSegment(value: ChatEnum.groups, label: Text('Groups')),
-              //     ButtonSegment(
-              //       value: ChatEnum.communities,
-              //       label: Text('Communities'),
-              //     ),
-              //     ButtonSegment(value: ChatEnum.pinned, label: Text('Pinned')),
-              //   ],
-              //   selected: <ChatEnum>{selectedSegmentValue},
-              //   onSelectionChanged: (Set<ChatEnum> newSelction) {
-              //     setState(() {
-              //       selectedSegmentValue = newSelction.first;
-              //     });
-              //   },
-              // ),
-            ),
             const SizedBox(height: 16),
 
             // Chats list
