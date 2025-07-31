@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:hanging_around_wd_ui/core/text_styling/app_text_styles.dart';
+
+class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
+  const AppBarWidget({
+    super.key,
+    required this.title,
+    required this.actionWidget,
+  });
+
+  final String title;
+  final Widget actionWidget;
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      title: Text(
+        title,
+        style: title == 'WhatsApp' ? context.getTitle : context.getOtherTitles,
+      ),
+      actions: [
+        actionWidget,
+        IconButton(
+          icon: const Icon(Icons.more_vert),
+          onPressed: () {
+            // More options action
+          },
+        ),
+      ],
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+}
