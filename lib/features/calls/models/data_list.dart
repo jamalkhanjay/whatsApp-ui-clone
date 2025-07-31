@@ -14,7 +14,7 @@ final List<CallItems> recents = [
     isVideoCall: false,
   ),
   CallItems(
-    name: "Tajamul OS Dev",
+    name: "Tajamul",
     imageUrl: "assets/tajamul.jpg",
     date: "28 July, 1:45 pm",
     isOutgoing: true,
