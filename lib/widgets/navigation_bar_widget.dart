@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hanging_around_wd_ui/features/calls/presentation/calls_screen.dart';
 import 'package:hanging_around_wd_ui/features/chats/presentation/chat_screen.dart';
-import 'package:hanging_around_wd_ui/screens/communitites_screen.dart';
+import 'package:hanging_around_wd_ui/features/communities/presentation/screens/communitites_screen.dart';
 import 'package:hanging_around_wd_ui/features/updates/presentation/screen/updates_screen.dart';
 
 class NavigationBarWidget extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hanging_around_wd_ui/core/widgets/app_bar_widget.dart';
-import 'package:hanging_around_wd_ui/enums/chat_enum.dart';
-import 'package:hanging_around_wd_ui/features/chats/widgets/chats_list_widget.dart';
-import 'package:hanging_around_wd_ui/features/chats/widgets/choice_chips_horizontal.dart';
+import 'package:hanging_around_wd_ui/core/enums/chat_enum.dart';
+import 'package:hanging_around_wd_ui/features/chats/presentation/widgets/chats_list_widget.dart';
+import 'package:hanging_around_wd_ui/features/chats/presentation/widgets/choice_chips_horizontal.dart';
 
 class ChatScreen extends StatefulWidget {
   const ChatScreen({super.key});
@@ -58,6 +58,28 @@ class _ChatScreenState extends State<ChatScreen> {
 
               // Chats list
               ChatsListWidget(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.lock, size: 10),
+                  Text(
+                    'Your personal messages are ',
+                    style: TextStyle(fontSize: 10),
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      overlayColor: Colors.transparent,
+                      padding: EdgeInsets.zero,
+                    ),
+                    onPressed: () {},
+                    child: Text(
+                      'end-to-end encrypted',
+                      style: TextStyle(fontSize: 10, color: Colors.green),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 64),
             ],
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/enums/chat_enum.dart';
+import 'package:hanging_around_wd_ui/core/enums/chat_enum.dart';
 
 class ChoiceChipsHorizontal extends StatefulWidget {
   const ChoiceChipsHorizontal({super.key});

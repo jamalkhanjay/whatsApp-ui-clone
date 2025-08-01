@@ -6,8 +6,12 @@ class CommunititesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       appBar: AppBarWidget(title: 'Communities', actionWidget: Text('')),
+      body: Padding(
+        padding: EdgeInsetsGeometry.all(16),
+        child: Container(width: 100, height: 100, decoration: BoxDecoration()),
+      ),
     );
   }
 }
