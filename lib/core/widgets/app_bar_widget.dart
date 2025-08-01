@@ -6,10 +6,12 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     super.key,
     required this.title,
     required this.actionWidget,
+    required this.popMenuButton,
   });
 
   final String title;
   final Widget actionWidget;
+  final PopupMenuButton popMenuButton;
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +22,13 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       ),
       actions: [
         actionWidget,
-        IconButton(
-          icon: const Icon(Icons.more_vert),
-          onPressed: () {
-            // More options action
-          },
-        ),
+        popMenuButton,
+        // IconButton(
+        //   icon: const Icon(Icons.more_vert),
+        //   onPressed: () {
+        //     // More options action
+        //   },
+        // ),
       ],
     );
   }

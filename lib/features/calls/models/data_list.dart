@@ -1,7 +1,7 @@
 import 'package:hanging_around_wd_ui/features/calls/models/call_items.dart';
 
 final List<CallItems> favourites = [
-  CallItems(name: "Meee", imageUrl: "assets/me.jpg", date: "01 July"),
+  CallItems(name: "Baba", imageUrl: "assets/me.jpg", date: "01 July"),
   CallItems(name: "Sami", imageUrl: "assets/sur.jpg", date: "21 Aug"),
   CallItems(name: "Uzair Bro", imageUrl: "assets/uzair.jpg", date: "19 Feb"),
 ];

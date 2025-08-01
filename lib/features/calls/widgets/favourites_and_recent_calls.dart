@@ -12,7 +12,10 @@ class FavouritesAndRecentCalls extends StatelessWidget {
       children: [
         ...favourites.map(
           (f) => ListTile(
-            contentPadding: EdgeInsets.zero,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(8),
+            ),
+            contentPadding: EdgeInsets.all(4),
             // leading: CircleAvatar(backgroundImage: AssetImage(f.imageUrl)),
             leading: CircleAvatar(child: Text(f.name[0])),
             title: Text(f.name),
@@ -26,15 +29,22 @@ class FavouritesAndRecentCalls extends StatelessWidget {
                 ),
               ],
             ),
+            onTap: () {},
           ),
         ),
         SizedBox(height: 10),
-        Text('Recent', style: heading1),
+        Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Text('Recent', style: heading1),
+        ),
         SizedBox(height: 10),
 
         ...recents.map(
           (r) => ListTile(
-            contentPadding: EdgeInsets.zero,
+            contentPadding: EdgeInsets.all(4),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4),
+            ),
             // leading: CircleAvatar(backgroundImage: AssetImage(r.imageUrl)),
             leading: CircleAvatar(child: Text(r.name[0])),
             title: Text(
@@ -55,6 +65,7 @@ class FavouritesAndRecentCalls extends StatelessWidget {
             trailing: Icon(
               r.isVideoCall ? Icons.videocam_outlined : Icons.call,
             ),
+            onTap: () {},
           ),
         ),
       ],

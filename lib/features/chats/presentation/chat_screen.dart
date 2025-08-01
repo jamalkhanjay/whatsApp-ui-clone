@@ -25,6 +25,30 @@ class _ChatScreenState extends State<ChatScreen> {
             // Search action
           },
         ),
+        popMenuButton: PopupMenuButton(
+          itemBuilder: (context) => [
+            const PopupMenuItem(
+              value: 'starred messages',
+              child: Text('Starred Message'),
+            ),
+            const PopupMenuItem(
+              value: 'devices',
+              child: Text('Connected Devices'),
+            ),
+            const PopupMenuItem(value: 'settings', child: Text('Settings')),
+          ],
+          onSelected: (value) {
+            if (value == 'starred messages') {
+              debugPrint('You cliked on starred messages');
+            }
+            if (value == 'devices') {
+              debugPrint('Connected devices button is clicked');
+            }
+            if (value == 'settings') {
+              debugPrint('Settings is clicked');
+            }
+          },
+        ),
       ),
       body: Padding(
         padding: const EdgeInsetsGeometry.only(left: 20, right: 20),
