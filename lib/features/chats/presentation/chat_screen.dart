@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hanging_around_wd_ui/core/widgets/app_bar_widget.dart';
-import 'package:hanging_around_wd_ui/core/enums/chat_enum.dart';
 import 'package:hanging_around_wd_ui/features/chats/presentation/widgets/chats_list_widget.dart';
 import 'package:hanging_around_wd_ui/features/chats/presentation/widgets/choice_chips_horizontal.dart';
 
-class ChatScreen extends StatefulWidget {
+class ChatScreen extends ConsumerStatefulWidget {
   const ChatScreen({super.key});
 
   @override
-  State<ChatScreen> createState() => _ChatScreenState();
+  ConsumerState<ChatScreen> createState() => _ChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
-  ChatEnum selectedSegmentValue = ChatEnum.all;
-
+class _ChatScreenState extends ConsumerState<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -82,6 +80,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
               // Chats list
               ChatsListWidget(),
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

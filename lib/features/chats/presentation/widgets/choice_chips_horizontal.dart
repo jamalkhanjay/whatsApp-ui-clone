@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/enums/chat_enum.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hanging_around_wd_ui/features/chats/presentation/providers/filtered_chats_provider.dart';
 
-class ChoiceChipsHorizontal extends StatefulWidget {
+class ChoiceChipsHorizontal extends ConsumerStatefulWidget {
   const ChoiceChipsHorizontal({super.key});
 
   @override
-  State<ChoiceChipsHorizontal> createState() => _ChoiceChipsHorizontalState();
+  ConsumerState<ChoiceChipsHorizontal> createState() =>
+      _ChoiceChipsHorizontalState();
 }
 
-class _ChoiceChipsHorizontalState extends State<ChoiceChipsHorizontal> {
-  ChatEnum selectedSegmentValue = ChatEnum.all;
+class _ChoiceChipsHorizontalState extends ConsumerState<ChoiceChipsHorizontal> {
+  // ChatEnum selectedSegmentValue = ChatEnum.all;
+  List<String> statusValue = [
+    "All",
+    "Unread",
+    "Favourites",
+    "Groups",
+    "Communities",
+    'Pinned',
+  ];
 
   @override
   Widget build(BuildContext context) {
+    final selectedChat = ref.watch(chatTypeProvider);
+
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: SizedBox(
@@ -20,20 +32,14 @@ class _ChoiceChipsHorizontalState extends State<ChoiceChipsHorizontal> {
         child: Row(
           // Applying map on list gives iterable while here children of
           // row wants list widgets, so at the last we write .toList()
-          children: ChatEnum.values.map((item) {
+          children: statusValue.map((item) {
             return Padding(
               padding: const EdgeInsetsGeometry.all(6),
               child: ChoiceChip(
                 showCheckmark: false,
                 padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-                label: Text(
-                  // for example item recieve word all
-                  // item.name[0] -> a   -> toUpperCase() -> A
-                  // + item.name.substriing(1) means it will start from
-                  // index 1 to the end which ll so it becomes All
-                  item.name[0].toUpperCase() + item.name.substring(1),
-                ),
-                selected: selectedSegmentValue == item,
+                label: Text(item),
+                selected: selectedChat == item,
                 selectedColor: Colors.green[100], // WhatsApp-style highlight
                 backgroundColor: Colors.white,
                 side: BorderSide(color: Colors.grey.shade300), // Border
@@ -41,9 +47,11 @@ class _ChoiceChipsHorizontalState extends State<ChoiceChipsHorizontal> {
                   borderRadius: BorderRadius.circular(50),
                 ),
                 onSelected: (bool selected) {
-                  setState(() {
-                    selectedSegmentValue = item;
-                  });
+                  debugPrint(
+                    'The selected value is $selected and item is $item',
+                  );
+                  ref.read(chatTypeProvider.notifier).state = item;
+                  debugPrint('The provider value is $selectedChat');
                 },
               ),
             );
