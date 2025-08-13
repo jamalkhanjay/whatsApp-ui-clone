@@ -1,4 +1,4 @@
-import 'package:hanging_around_wd_ui/features/updates/models/status/status_cards_model.dart';
+import 'package:whatsapp_clone/features/updates/models/status/status_cards_model.dart';
 
 final List<StatusCardsModel> cardsList = [
   StatusCardsModel(

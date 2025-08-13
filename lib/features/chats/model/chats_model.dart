@@ -1,6 +1,7 @@
 // import 'dart:collection';
 
 class ChatsModel {
+  final String id;
   final String imageUrl;
   final String name;
   final String message;
@@ -11,6 +12,7 @@ class ChatsModel {
   final bool seen;
 
   ChatsModel({
+    required this.id,
     required this.imageUrl,
     required this.name,
     required this.message,

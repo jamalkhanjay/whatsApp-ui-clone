@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:hanging_around_wd_ui/features/chats/presentation/providers/filtered_chats_provider.dart';
+import 'package:whatsapp_clone/features/chats/presentation/providers/filtered_chats_provider.dart';
 
 class ChoiceChipsHorizontal extends ConsumerStatefulWidget {
   const ChoiceChipsHorizontal({super.key});
@@ -46,12 +46,9 @@ class _ChoiceChipsHorizontalState extends ConsumerState<ChoiceChipsHorizontal> {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),
                 ),
-                onSelected: (bool selected) {
-                  debugPrint(
-                    'The selected value is $selected and item is $item',
-                  );
+                onSelected: (_) {
                   ref.read(chatTypeProvider.notifier).state = item;
-                  debugPrint('The provider value is $selectedChat');
+                  ref.read(searchQueryProvider.notifier).state = '';
                 },
               ),
             );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/widgets/app_bar_widget.dart';
-import 'package:hanging_around_wd_ui/features/updates/presentation/widgets/channels_widget.dart';
-import 'package:hanging_around_wd_ui/features/updates/presentation/widgets/status_widget.dart';
-import 'package:hanging_around_wd_ui/core/styles/text_styles.dart';
+import 'package:whatsapp_clone/core/widgets/app_bar_widget.dart';
+import 'package:whatsapp_clone/features/updates/presentation/widgets/channels_widget.dart';
+import 'package:whatsapp_clone/features/updates/presentation/widgets/status_widget.dart';
+import 'package:whatsapp_clone/core/styles/text_styles.dart';
 
 class UpdatesScreen extends StatelessWidget {
   const UpdatesScreen({super.key, required this.title});
@@ -19,6 +19,8 @@ class UpdatesScreen extends StatelessWidget {
           icon: const Icon(Icons.search),
         ),
         popMenuButton: PopupMenuButton(
+          position: PopupMenuPosition.under,
+          elevation: 8,
           itemBuilder: (context) => [
             const PopupMenuItem(value: 'status', child: Text('Status privacy')),
             const PopupMenuItem(value: 'settings', child: Text('Settings')),

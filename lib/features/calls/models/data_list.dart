@@ -1,4 +1,4 @@
-import 'package:hanging_around_wd_ui/features/calls/models/call_items.dart';
+import 'package:whatsapp_clone/features/calls/models/call_items.dart';
 
 final List<CallItems> favourites = [
   CallItems(name: "Baba", imageUrl: "assets/me.jpg", date: "01 July"),

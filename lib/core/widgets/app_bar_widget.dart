@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/text_styling/app_text_styles.dart';
+import 'package:whatsapp_clone/core/text_styling/app_text_styles.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   const AppBarWidget({
@@ -18,7 +18,11 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Text(
         title,
-        style: title == 'WhatsApp' ? context.getTitle : context.getOtherTitles,
+        style: title == 'WhatsApp'
+            ? context.getTitle
+            : title == 'Select Contact'
+            ? context.addContactPage
+            : context.getOtherTitles,
       ),
       actions: [
         actionWidget,

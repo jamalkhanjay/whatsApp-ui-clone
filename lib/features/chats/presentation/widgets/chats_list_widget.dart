@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-// import 'package:hanging_around_wd_ui/features/chats/model/list_data.dart';
-import 'package:hanging_around_wd_ui/features/chats/presentation/providers/filtered_chats_provider.dart';
+import 'package:go_router/go_router.dart';
+import 'package:whatsapp_clone/features/chats/presentation/providers/filtered_chats_provider.dart';
 
 class ChatsListWidget extends ConsumerWidget {
   const ChatsListWidget({super.key});
@@ -32,8 +32,8 @@ class ChatsListWidget extends ConsumerWidget {
                       ? Colors.blue
                       : Colors.grey,
                 ),
-                SizedBox(width: 5),
-                Text(user.message),
+                SizedBox(width: 2),
+                Expanded(child: Text(user.message)),
               ],
             ),
             trailing: Column(
@@ -43,7 +43,35 @@ class ChatsListWidget extends ConsumerWidget {
               ],
             ),
             dense: true,
-            contentPadding: EdgeInsets.zero,
+            contentPadding: EdgeInsets.symmetric(horizontal: 4),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadiusGeometry.circular(4),
+            ),
+            onTap: () => {
+              context.pushNamed(
+                'chatDetail',
+                pathParameters: {'chatId': user.id.toString()},
+              ),
+
+              // I have implemented dialog on this first
+              // showDialog(
+              //   context: context,
+              //   builder: (BuildContext context) => AlertDialog(
+              //     title: Text(user.name),
+              //     content: Text('You clicked on the ${user.name} chat.!'),
+              //     actions: <Widget>[
+              //       TextButton(
+              //         onPressed: () => Navigator.pop(context),
+              //         child: Text('Cancel'),
+              //       ),
+              //       TextButton(
+              //         onPressed: () => Navigator.pop(context),
+              //         child: Text('OK'),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+            },
           );
         }),
       ],

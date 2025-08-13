@@ -1,7 +1,8 @@
-import 'package:hanging_around_wd_ui/features/chats/model/chats_model.dart';
+import 'package:whatsapp_clone/features/chats/model/chats_model.dart';
 
 final List<ChatsModel> users = [
   ChatsModel(
+    id: '1',
     imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
     name: "John Smith",
     message: "Hey, how are you doing today?",
@@ -11,6 +12,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '2',
     imageUrl: "https://randomuser.me/api/portraits/women/2.jpg",
     name: "Emily Johnson",
     message: "Let's meet at the coffee shop later.",
@@ -20,6 +22,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '3',
     imageUrl: "https://randomuser.me/api/portraits/men/3.jpg",
     name: "Michael Brown",
     message: "Got the documents you sent me.",
@@ -29,6 +32,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '4',
     imageUrl: "https://randomuser.me/api/portraits/women/4.jpg",
     name: "Sophia Davis",
     message: "Can't talk right now, call you later.",
@@ -38,6 +42,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '5',
     imageUrl: "https://randomuser.me/api/portraits/men/5.jpg",
     name: "Daniel Wilson",
     message: "Happy birthday! Wish you all the best.",
@@ -47,6 +52,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '6',
     imageUrl: "https://randomuser.me/api/portraits/women/6.jpg",
     name: "Olivia Taylor",
     message: "Where are you? Been waiting outside.",
@@ -56,6 +62,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '7',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Rachel Green",
     message: "I love fashion job it's my dream job.",
@@ -65,6 +72,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '8',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Ross Geller",
     message: "How are you Rach, could you do me a favour?",
@@ -74,6 +82,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '9',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "James Anderson",
     message: "Sure, let's do it this weekend.",
@@ -83,6 +92,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '10',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Phoebe Buffay",
     message: "I love my brother I wanna give a big surprise.",
@@ -92,6 +102,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '11',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Joey Tribbiani",
     message: "I order 2 Dozens sandwiches :)",
@@ -101,6 +112,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '12',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Monica Geller",
     message: "Please empty that trash.",
@@ -110,6 +122,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '13',
     imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
     name: "Danny Morsan",
     message: "You hair style is differet bro.",
@@ -119,6 +132,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '14',
     imageUrl: "https://randomuser.me/api/portraits/women/8.jpg",
     name: "Isabella Thomas",
     message: "Had a great time last night, thanks!",
@@ -128,6 +142,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '15',
     imageUrl: "https://randomuser.me/api/portraits/men/9.jpg",
     name: "Benjamin Martinez",
     message: "Check out the new project files.",
@@ -137,6 +152,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '16',
     imageUrl: "https://randomuser.me/api/portraits/women/10.jpg",
     name: "Mia Garcia",
     message: "Will you join the call tomorrow?",
@@ -146,6 +162,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '17',
     imageUrl: "https://randomuser.me/api/portraits/men/11.jpg",
     name: "William Lee",
     message: "Let's finalize the report by Friday.",
@@ -155,6 +172,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '18',
     imageUrl: "https://randomuser.me/api/portraits/women/12.jpg",
     name: "Charlotte Harris",
     message: "Sent you the location on WhatsApp.",
@@ -164,6 +182,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '19',
     imageUrl: "https://randomuser.me/api/portraits/men/13.jpg",
     name: "Ethan Clark",
     message: "Sure, I'll bring the documents with me.",
@@ -173,6 +192,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '20',
     imageUrl: "https://randomuser.me/api/portraits/women/14.jpg",
     name: "Amelia Lewis",
     message: "Did you check the new restaurant?",
@@ -182,6 +202,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '21',
     imageUrl: "https://randomuser.me/api/portraits/men/15.jpg",
     name: "Alexander Robinson",
     message: "Let’s catch up after office hours.",
@@ -191,6 +212,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '22',
     imageUrl: "https://randomuser.me/api/portraits/women/16.jpg",
     name: "Harper Walker",
     message: "Great job on the presentation!",
@@ -200,6 +222,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '23',
     imageUrl: "https://randomuser.me/api/portraits/men/17.jpg",
     name: "Jacob Young",
     message: "✅Please review the contract updates.",
@@ -209,6 +232,7 @@ final List<ChatsModel> users = [
     seen: true,
   ),
   ChatsModel(
+    id: '24',
     imageUrl: "https://randomuser.me/api/portraits/women/18.jpg",
     name: "Evelyn King",
     message: "I'll send the package tomorrow morning.",
@@ -218,6 +242,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '25',
     imageUrl: "https://randomuser.me/api/portraits/men/19.jpg",
     name: "Henry Wright",
     message: "Meeting postponed to next Tuesday.",
@@ -227,6 +252,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '26',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
     name: "Abigail Scott",
     message: "We won yesterday game.",
@@ -236,6 +262,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '27',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
     name: "Belly Bucher",
     message: "Need help with the design mockups.",
@@ -245,6 +272,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '28',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
     name: "Harlay Adkins",
     message: "Need help with the design mockups.",
@@ -254,6 +282,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '29',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
     name: "Chandler Bing",
     message: "Do you need me on Saturday.",
@@ -263,6 +292,7 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '30',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
     name: "Samules Geller",
     message: "GReat to hear that.",
@@ -272,12 +302,13 @@ final List<ChatsModel> users = [
     seen: false,
   ),
   ChatsModel(
+    id: '31',
     imageUrl: "https://randomuser.me/api/portraits/women/20.jpg",
-    name: "Abigail Scott",
-    message: "Need help with the design mockups.",
-    time: "2 days ago",
+    name: "Joshwa Menial",
+    message: "I am afraid of the chickens and ducks",
+    time: "1 days ago",
     currentStatus: 'Unread',
     sentAndRecieved: true,
-    seen: true,
+    seen: false,
   ),
 ];

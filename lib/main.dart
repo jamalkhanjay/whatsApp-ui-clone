@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/widgets/navigation_bar_widget.dart';
+import 'package:whatsapp_clone/core/router/routes.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
@@ -12,14 +12,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp Clone',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
       ),
       // darkTheme: ThemeData.dark(),
-      home: const NavigationBarWidget(),
+      routerConfig: routes,
     );
   }
 }

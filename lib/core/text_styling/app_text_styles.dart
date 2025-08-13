@@ -18,4 +18,6 @@ extension AppTextStyle on BuildContext {
 
   TextStyle get getOtherTitles =>
       TextStyle(fontWeight: FontWeight.bold, fontSize: 20);
+
+  TextStyle get addContactPage => TextStyle(fontSize: 16);
 }

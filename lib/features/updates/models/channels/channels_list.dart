@@ -1,4 +1,4 @@
-import 'package:hanging_around_wd_ui/features/updates/models/channels/channel_model.dart';
+import 'package:whatsapp_clone/features/updates/models/channels/channel_model.dart';
 
 final List<ChannelModel> channelsList = [
   ChannelModel(

@@ -1,4 +1,4 @@
-# hanging_around_wd_ui
+# whatsapp_clone
 
 A new Flutter project.
 

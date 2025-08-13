@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/widgets/app_bar_widget.dart';
-import 'package:hanging_around_wd_ui/features/communities/presentation/widgets/cummunity_Item_Widget.dart';
+import 'package:whatsapp_clone/core/widgets/app_bar_widget.dart';
+import 'package:whatsapp_clone/features/communities/presentation/widgets/cummunity_Item_Widget.dart';
 
 class CommunititesScreen extends StatelessWidget {
   const CommunititesScreen({super.key});
@@ -12,12 +12,13 @@ class CommunititesScreen extends StatelessWidget {
         title: 'Communities',
         actionWidget: Text(''),
         popMenuButton: PopupMenuButton(
+          position: PopupMenuPosition.under,
+          elevation: 8,
           itemBuilder: (context) => [
             const PopupMenuItem(
               value: 'all-communities',
               child: Text('All Communities'),
             ),
-
             const PopupMenuItem(value: 'settings', child: Text('Settings')),
           ],
           onSelected: (value) {

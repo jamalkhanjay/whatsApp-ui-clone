@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/styles/text_styles.dart';
-import 'package:hanging_around_wd_ui/features/updates/models/channels/channels_list.dart';
+import 'package:whatsapp_clone/core/styles/text_styles.dart';
+import 'package:whatsapp_clone/features/updates/models/channels/channels_list.dart';
 
 class ChannelsWidget extends StatefulWidget {
   const ChannelsWidget({super.key});
@@ -83,8 +83,8 @@ class _ChannelsWidgetState extends State<ChannelsWidget> {
 }
 
 // import 'package:flutter/material.dart';
-// import 'package:hanging_around_wd_ui/core/styles/text_styles.dart';
-// import 'package:hanging_around_wd_ui/features/updates/models/channels/channels_list.dart';
+// import 'package:whatsapp_clone/core/styles/text_styles.dart';
+// import 'package:whatsapp_clone/features/updates/models/channels/channels_list.dart';
 
 // class ChannelsWidget extends StatefulWidget {
 //   const ChannelsWidget({super.key});

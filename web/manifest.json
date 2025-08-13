@@ -1,6 +1,6 @@
 {
-    "name": "hanging_around_wd_ui",
-    "short_name": "hanging_around_wd_ui",
+    "name": "whatsapp_clone",
+    "short_name": "whatsapp_clone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

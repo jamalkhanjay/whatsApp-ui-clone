@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hanging_around_wd_ui/core/styles/text_styles.dart';
-import 'package:hanging_around_wd_ui/features/updates/models/status/cards_list.dart';
+import 'package:whatsapp_clone/core/styles/text_styles.dart';
+import 'package:whatsapp_clone/features/updates/models/status/cards_list.dart';
 
 class StatusWidget extends StatelessWidget {
   const StatusWidget({super.key});
